@@ -1,3 +1,11 @@
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
+
 .gradle
 /build/
 
