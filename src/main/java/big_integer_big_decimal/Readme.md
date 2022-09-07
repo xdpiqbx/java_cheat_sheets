@@ -29,7 +29,19 @@ public class Main {
 }
 ```
 
-[продолжение](https://javarush.ru/groups/posts/2274-kak-ispoljhzovatjh-bigdecimal-v-java)
+- Классы больших чисел не используют в своей работе операторы `+ - * /`, а предоставляют вместо этого набор методов.
+`add(), subtract(), multiply(), divide()`
 
-продолжение
-Наше число не изменилось, как и следовало ожидать. Чтобы операция сложения прошла успешно, необходимо создать новый объект и присвоить ему результат сложения.
+- `doubleValue(), intValue(), floatValue(), longValue()` и т.д. — для преобразования к примитивному типу Java. Не забывать про разницу во вместимости!
+- `min()` и `max()` — позволяют найти минимальное и максимальное значение из двух переданных больших чисел.
+
+```java
+BigInteger one = new BigInteger("11111");
+BigInteger two = new BigInteger("22222");
+
+System.out.println(one.max(two));
+```
+
+## Управление округлением BigDecimal
+
+[https://javarush.ru/groups/posts/2274-kak-ispoljhzovatjh-bigdecimal-v-java](https://javarush.ru/groups/posts/2274-kak-ispoljhzovatjh-bigdecimal-v-java)
